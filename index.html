@@ -42,7 +42,21 @@ layout: landing-page
 							</div>				
 						</div>
 					</section>
-					
+				<section class="wrapper style3 container">
+				<hr>
+				<header>
+					<h2>News</h2>
+					<h4><b>Latest news and updates from the Envision team:</b></h4>
+				</header>
+				<ul>
+		          {% for post in site.posts limit:5 %}
+		          	<li>
+		            <p><a href="{{ post.url }}">{{ post.title }}</a> <br> 
+		            	<small>{{ post.date | date_to_long_string }}</small> </p>
+		            </li>
+		          {% endfor %}
+				</ul>
+			</section>	
 				<!-- Two -->
 					<section class="wrapper style1 container special">
 						<div class="row">
@@ -75,7 +89,7 @@ layout: landing-page
 									<header>
 										<h3>Networking</h3>
 									</header>
-									<p>We are actively engaging with students, faculty and staff across campus, throughout North America and internationally in our projects. Our professional connections span from Vancouver to New York.</p>
+									<p>We are actively engaging with students, faculty and staff across campus, throughout North America and internationally in our projects. Our professional connections span from Vancouver to New York and Europe.</p>
 								</section>
 							
 							</div>
@@ -141,19 +155,3 @@ layout: landing-page
 					</section>
 					
 			</article>
-
-		<!-- CTA -->
-<!-- 			<section id="cta">
-			
-				<header>
-					<h2>Ready to do <strong>something</strong>?</h2>
-					<p>Proin a ullamcorper elit, et sagittis turpis integer ut fermentum.</p>
-				</header>
-				<footer>
-					<ul class="buttons">
-						<li><a href="#" class="button special">Take My Money</a></li>
-						<li><a href="#" class="button">LOL Wut</a></li>
-					</ul>
-				</footer>
-			
-			</section> -->
